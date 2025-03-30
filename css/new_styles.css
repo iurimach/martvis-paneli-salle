@@ -1,0 +1,345 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* კატალოგის კონტეინერი */
+  .catalog-container {
+   
+    margin: 20px;
+    position: relative;
+  }
+
+  /* კატალოგის ღილაკი */
+  .catalog-button {
+    width: 100%;
+   
+    text-align: left;
+   
+    
+  
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+   
+  }
+  #wrapper5_child_div{
+    max-width: 450px;
+    width: 450px;
+  }
+  
+  .nav-link{
+    height: 40px;
+  }
+
+  /* კატალოგის ჩამოშლილი მენიუ */
+  .catalog-menu {
+    display: block; /* დეფაულტად გახსნილია */
+    width: 200px;
+    max-width: 200px;
+    margin-top: -10px;
+    margin-left: -20px;
+    background-color:white;
+    background-color: rgba(255, 255, 255, 0.5); /* თეთრი ფერი 50% გამჭირვალობით */
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+   
+}
+.catalog-menu:hover{
+    background-color:white;
+}
+
+  /* კატალოგის ღილაკები */
+  .catalog-item {
+    padding: 8px 10px;
+    background-color: none;
+     
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .catalog-item:hover {
+    background-color: #e6e8ec;
+  }
+  .categ_bt{
+    background: none;
+    border: none;
+    background-color: none;
+    
+ }
+
+.col-lg-7_2{
+    
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+  /* მარჯვენა ფანჯარა, რომელიც გამოჩნდება ჰოვერის დროს */
+  .catalog-item {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    width: 106%;
+}
+
+.hover-menu {
+    display: none;
+    position: absolute;
+    width: 400px;
+    max-width: 400px;
+    top: 0; /* ფანჯარა იქნება ღილაკის ზემოთ */
+    left: 100%; /* აქ გამოვიყენებთ left: 100% რათა ფანჯარა იყოს ღილაკის მარჯვნივ */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+   
+}
+
+/* როდესაც მაუსი გადადის მენიუზე */
+.catalog-item:hover .hover-menu {
+    display: block;
+   
+}
+
+/* ასევე, ჰოვერით მენიუზე */
+.hover-menu:hover {
+    display: block;
+}
+
+/* ზოგადი სტილიზაცია მენიუს ელემენტებისთვის */
+.hover-menu div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.hover-menu div:hover {
+    background-color: white;
+}
+
+  /* აქ არის აიტმების სტილი პარტიორები */
+
+    h1 {
+        color: #4CAF50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #category-buttons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #category-buttons button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #category-buttons button:hover {
+        background-color: #45a049;
+    }
+
+    .catalog_icon{
+        width: 25px;
+        height: 14x;
+    }
+    /* სტილები, რომ აიტემები კარგად განლაგდეს */
+    #items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    #item {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+.wrapper03{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+
+    justify-content: space-evenly
+}
+.msxvili_teknika_img{
+    width: 500px; 
+    max-width: 500px;
+    height: 300px;
+}
+.msx_tek_a{
+    width: 500px; 
+    max-width: 500px;
+    
+}
+.wrapper003{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content:space-between
+}
+.wrapper003_div{
+    width: 450px;
+    max-width: 450px;
+    height: 170px
+}
+.wrapper003_img{
+
+    width: 210px ;
+    max-width: 210px;
+    height: 170px;
+    
+
+}
+.wrapper004{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content:space-between
+}
+.wrapper004_div{
+    width: 450px;
+    max-width: 450px;
+}
+.wrapper004_img{
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+    height: 110px;
+}
+
+
+.py-4{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*-- whatsupp სტილები*/
+.whatsapp-icon {
+    position: fixed; /* ფიქსირებული პოზიცია */
+    bottom: 20px; /* 20px მანძილი ქვემოთ */
+    right: 20px; /* 20px მანძილი მარჯვენა მხრიდან */
+    z-index: 23; /* ინდექსი 23, რომ სხვა ელემენტების ზემოთ დარჩეს */
+    width: 50px; /* აიკონის სიგრძე (შეცვალე როგორც საჭიროა) */
+    height: 50px; /* აიკონის სიმაღლე (შეიცვალე როგორც საჭიროა) */
+  }
+  
+  .whatsapp-icon img {
+    width: 100%; /* აიკონის სურათი ადაპტირებულია კონტეინერის ზომებთან */
+    height: auto;
+    cursor: pointer;
+  }
+  
+
+   /* ჩატ ბოტის ღილაკი */
+   #chatButton {
+   
+    right: 20px;
+    bottom: 72px;
+    background-color: #FFCC00 !important;
+    
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#chatButton_close{
+   
+    margin-left: 240px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FFCC00 !important;
+   
+}
+/* ჩატ ბოტის კონტეინერი */
+#chatContainer {
+    display: none; /* პირველადი დასალაგებელი მდგომარეობა */
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+/* ჩატ ბოტის სივრცე */
+#chatContent {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* თითოეული კითხვა */
+.question {
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0; /* ღია ნაცრისფერი ფერი */
+    border-radius: 5px;
+    color: #333; /* მუქი წითელი ტექსტი */
+    font-weight: bold;
+}
+
+/* თითოეული პასუხი */
+.answer {
+    padding: 10px;
+    background-color: #dcdcdc; /* მუქი ნაცრისფერი ფერი */
+    margin-bottom: 5px;
+    display: none; /* პირველად დაფარული */
+    border-radius: 5px;
+    color: #000; /* შავი ტექსტი */
+}

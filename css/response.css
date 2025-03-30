@@ -1,0 +1,213 @@
+@media (max-width: 1150px) {
+    .section1_wrapper3{
+        right: 12%;  
+       }
+}
+@media (max-width: 1050px) {
+    .section1_wrapper3{
+        right: 10%;  
+       }
+}
+@media (max-width: 1000px) {
+   #navbarCollapse2{
+    display: flex;
+    
+   }
+   .section1_wrapper3{
+    right: 10%;  
+   }
+   .section1{
+    width: 99%;
+   }
+   .section1-wrapper1{
+    width: 99%;;
+   }
+   .imgs_wrapper {
+    width: 58%;
+   }
+   #detailImg {
+    width: 500px;
+    max-width: 500px;
+    width: 90%;
+   }
+   .section1-wrapper2 {
+    width: 58%;
+   }
+   .navbar-nav{
+    height: auto;
+   }
+   #dialogContainer{
+    width: 400px;
+    left: 0px;
+    
+   }
+}
+
+@media (max-width: 750px) {
+    #detailImg{
+        
+        max-width: 300px;
+        height: 300px;
+    }
+    .imgs_wrapper {
+        width: 47%;
+    }
+    .section1-wrapper2 {
+        width: 46%;
+    }
+    .selectitem_name{
+        width: 300px;
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    #detail_images_all_wrapper>img{
+        width: 50px;
+        height: 50px;
+    }
+    #dialogContainer{
+        width: 400px;
+        left: 0px;
+        transform: translate(-50%, -50%);
+        transform: translate(10%, -50%);
+       }
+       #wrapper5_child_div{
+        width: 450px;
+        
+       }
+
+}
+@media (max-width: 580px) {
+    #section1_wrapper3_div{
+        color: white;
+    }
+   .msxvili_teknika_img{
+      width: 400px; 
+      max-width: 400px;
+      height: 300px;
+  }
+  .msx_tek_a{
+      width: 400px; 
+      max-width: 400px;
+      
+  }
+  #detailImg{
+        
+    max-width: 300px;
+    height: 300px;
+    }
+    .imgs_wrapper {
+        width: 70%;
+        min-height: 440px;
+        height: auto;
+    }
+    .section1-wrapper2 {
+        width: 56%;
+    }
+    .selectitem_name{
+        width: 300px;
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    #detail_images_all_wrapper>img{
+        width: 50px;
+        height: 50px;
+    }
+    .section1-wrapper2 {
+        width: 70%;
+    }
+  .section1_wrapper3 {
+    position: fixed;
+    top: 0;
+    left: -250px; /* მენიუ ჯერ არ ჩანს */
+    width: 230px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out; /* ანიმაცია მენიუს გამოჩენისა და დახურვის */
+    }
+    #dialogContainer{
+    width: 400px;
+    left: 0px;
+    transform: translate(-50%, -50%);
+   }
+   #dialogContainer{
+    width: 400px;
+    left: 0px;
+    
+    transform: translate(10%, -50%);
+   }
+   .wrapper003_div{
+    width: 350px;
+   }
+   .wrapper004_div{
+    width: 350px;
+   }
+   #wrapper5_child_div{
+    width: 350px;
+    
+   }
+}
+
+@media (max-width: 450px) { 
+    #detail_image_wrapper{
+        display: flex;
+        justify-content: center
+    }
+    #detailImg{
+        
+    max-width: 300px;
+    height: 240px;
+            margin-left: 0px;
+    }
+    .imgs_wrapper {
+        width: 70%;
+        min-height: 360px;
+        height: auto;
+    }
+
+   .msxvili_teknika_img{
+      width: 280px; 
+      max-width: 280px;
+      height: 250px;
+      object-fit: contain !important;
+  }
+  .msx_tek_a{
+      width: 280px; 
+      max-width: 280px;
+      
+  }
+  .burger-btn{
+   right: 5px;
+  }
+  #dialogContainer{
+    width: 300px;
+    left: 0px;
+   
+    transform: translate(10%, -50%);
+   }
+
+   .wrapper003_div{
+    width: 250px;
+   }
+   .wrapper003_img{
+    width: 150px;
+   }
+   .wrapper004_div{
+    width: 250px;
+   }
+   .wrapper004_img{
+    width: 110px;
+   }
+   #wrapper5{
+    width: 200px;
+    width: 100%;
+   }
+   #wrapper5_child_div{
+    width: 200px;
+    width: 100%;
+   }
+
+}

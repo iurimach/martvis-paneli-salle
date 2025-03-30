@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მონაცემების მიღება</title>
+</head>
+<body>
+    <h1>მონაცემები სერვერიდან</h1>
+    
+    <!-- მოცემულია ელემენტი, სადაც ჩვენ მონაცემებს გამოვიტანთ -->
+    <div id="items-container">
+        <p>მონაცემები ლოდინდება...</p>
+    </div>
+
+    <script>
+        // პაროლი და მომხმარებლის სახელი
+        const username = 'admin';  // თქვენი მომხმარებლის სახელი
+        const password = 'adminpassword123';  // თქვენი პაროლი
+
+        // Base64-encode the username and password
+        const base64Credentials = btoa(username + ":" + password);
+
+        // დააყენეთ მოთხოვნა fetch-ში ავტორიზაციის header-ით
+        fetch('http://127.0.0.1:5000/api/data', {
+            method: 'GET',  // ან სხვა მეთოდი, რაც გჭირდებათ
+            headers: {
+                'Authorization': 'Basic ' + base64Credentials,  // ჩვენ ვამატებთ Base64-encoded სერვერის პაროლს
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();  // თუ მონაცემები კარგად დაბრუნდა, წაიკითხეთ JSON
+            } else {
+                throw new Error('Auth failed or no access');  // შეცდომის დამუშავება
+            }
+        })
+        .then(data => {
+            console.log(data);  // აქ გამოჩნდება სერვერიდან დაბრუნებული მონაცემები
+            displayItems(data);  // მონაცემების ჩვენება HTML-ში
+        })
+        .catch(error => {
+            console.error('Error:', error);  // შეცდომის პოვნა
+            document.getElementById('items-container').innerHTML = "<p>დაფიქსირდა შეცდომა: " + error.message + "</p>";
+        });
+
+        // მონაცემების ჩასმა HTML გვერდზე
+        function displayItems(items) {
+            let itemsHtml = "<table border='1'><thead><tr><th>სახელი</th><th>ფასი</th><th>იდ</th></tr></thead><tbody>";
+
+            items.forEach(item => {
+                itemsHtml += `<tr>
+                    <td>${item.name}</td>
+                    <td>${item.axali_fasi} ლარი</td>
+                    <td>${item.product_id}</td>
+                </tr>`;
+            });
+
+            itemsHtml += "</tbody></table>";
+
+            // ჩასვით მონაცემები გვერდზე
+            document.getElementById('items-container').innerHTML = itemsHtml;
+        }
+    </script>
+</body>
+</html>

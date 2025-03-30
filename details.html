@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/new_styles.css">
+    
+    <link rel="stylesheet" href="css/reklama.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/response.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+    publicKey: "1MIYPhYuXfSN_lht8", // es არის აქუნთ  განყოფილებაში, ღილაკში გადადი api key სქვმოთ წერია publick
+    });
+    })();
+    </script>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item border-right border-secondary">
+                            <p  class="nav-link text-body small" id="current-time"></p>
+                        </li>
+                     
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 " id="navbar2">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0" id="navbarCollapse2">
+                    <a href="index.html" class="nav-item nav-link active">მთავარი</a>
+
+                    
+                   
+                    
+                    <a href="Partner.html" class="nav-item nav-link">პარტნიორები</a>
+                    <a href="contact.html" class="nav-item nav-link">კონტაქტი</a>
+                </div>
+               
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <div class="section1">
+        <div class="section1-wrapper1">
+            <div class="imgs_wrapper">
+                <div id="detail_images_all_wrapper"></div>
+                <div id="detail_image_wrapper"></div>
+               
+            </div>
+            <div class="section1-wrapper2">
+                 <div id="itemDetails"> </div>
+            </div>
+
+             <!-- დიალოგის ფანჯარა სურათის გასაზრდელად -->
+            <div id="imageModal" class="modal">
+                <span id="closeModal" class="close">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="" />
+                    <button id="prevBtn" class="nav-btn">←</button>
+                    <button id="nextBtn" class="nav-btn">→</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ბურგერ ღილაკი სექცის ვამლვ ფასდკელბის -->
+        <div id="burgerBtn" class="burger-btn">
+            ფასდაკლება
+           
+        </div>
+        <div class="section1_wrapper3" id="section1Wrapper3">
+            <div style="margin-top: 20px;" id="section1_wrapper3_div">ფასდკლების მისაღებად არ გჭირდებათ რეგისტრაცია!</div>
+            <div style="margin-top: 20px; " id="section1_wrapper3_div"> კოდის მიღება არის უფასო!</div>
+            <div style="margin-top: 20px;"id="section1_wrapper3_div">კოდი მოქმედებს ერთჯერადად!</div>
+            <div style="margin-top:20px; margin-bottom: 30px;"> <a  style="margin-top:20px; margin-bottom: 30px;color: #FFCC00;" href="fasdakleba_info.html">დამატებითი ინფორმცაია</a></div>
+            
+            <!-- ღილაკი ციფრების გენერაციისთვის -->
+            <button id="openDialogBtn">ფასდაკელბის კოდი</button>
+        
+            <!-- დიალოგის ფანჯარა -->
+            <div id="dialogContainer" style="display:none;">
+               
+                <div><button id="closeDialogBtn">X</button></div>
+                <label for="fullName">სახელი და გვარი:</label>
+                <input type="text" id="fullName" placeholder="შეიყვანეთ სახელი და გვარი" required><br>
+        
+                <label for="phoneNumber">ტელეფონის ნომერი:</label>
+                <input type="text" id="phoneNumber" placeholder="შეიყვანეთ 9 ციფრიანი ტელეფონის ნომერი" required maxlength="9"><br>
+        
+                <button id="generateCodeBtn">კოდის მიღება</button>
+                
+                <!-- დახურვის ღილაკი -->
+                
+            </div>
+            
+            <div id="resultContainer">
+                <p id="result"></p>
+            </div>
+        </div>
+        
+        
+    </div>
+
+                
+                  
+        </div>
+
+           
+    </div>
+
+
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+        <div class="row py-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">საკონტაქტო </h5>
+             
+                <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>568 800 554</p>
+            
+                <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">დაგვაფეოლოვეთ</h6>
+                <div class="d-flex justify-content-start">
+                
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                   
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-instagram"></i></a>
+           
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">სიახლეები</h5>
+                <div class="mb-3">
+                    <div>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                        <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+                    </div>
+                    
+                    <a class="small text-body text-uppercase font-weight-medium" href=""> ჩვენ არ ვიღებთ მომხარებლისგან საკომისოს და არ ვყიდით ვაუჩერებს. ფასდაკლებისთვის გადახდა არ გიწევთ.</a>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2">
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                        <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+                    </div>
+                    <a class="small text-body text-uppercase font-weight-medium" href=""> ნივთის მიწოდება თბილისში არის უფასო.</a>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2">
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                        <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+                    </div>
+                    <a class="small text-body text-uppercase font-weight-medium" href="contact.html">როგორ მივიღო ფასდაკლება ?</a>
+                </div>
+                
+            </div>
+            
+           
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">&copy; <a href="https://www.iurimatch.com/">iurimatch</a>. All Rights Reserved. 
+		
+		
+		Design by <a href="https://www.iurimatch.com/">iurimatch</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/details.js"></script>
+</body>
+
+</html>

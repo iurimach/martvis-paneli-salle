@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/new_styles.css">
+    <link rel="stylesheet" href="css/response.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item border-right border-secondary">
+                            
+                            <p  class="nav-link text-body small" id="current-time"></p>
+                        </li>
+                     
+                    </ul>
+                    
+                    <a href="contact.html" style="margin-left: 45%; color: #FFCC00 ;" class=""> როგორ მივიღო ფასდაკლება ?</a>
+                </nav>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 " >
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0" id="navbarCollapse2">
+                    <a href="index.html" class="nav-item nav-link active">მთავარი</a>
+
+                    
+                    <div class="catalog-container">
+                        <!-- <button class="catalog-button nav-item nav-link" id="catalog-toggle">კატალოგი</button> -->
+                     <p class="catalog-button nav-item nav-link" id="catalog-toggle">კატალოგი</p>
+                    
+                        <!-- კატალოგის ჩამოშლილი მენიუ -->
+                        <div class="catalog-menu open" id="catalog-menu">
+                          <!-- პირველი ღილაკი -->
+                          <div class="catalog-item">
+                            <div>
+                                <img src="img/icon/teknika.svg" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('ტექნიკა')" class="categ_bt">ტექნიკა</button>
+                            </div>
+                            
+                            <div class="hover-menu">
+                              <div><button onclick="filterCategory('ტელეფონი')" class="categ_bt">ტელეფონი/ლეპტოპი</button></div>
+                              <div><button onclick="filterCategory('მსხვილი ტექნიკა')" class="categ_bt">მსხვილი ტექნიკა</button></div>
+                              <div><button onclick="filterCategory('სამზარეულოს ტექნიკა')" class="categ_bt">სამზარეულოს ტექნიკა</button></div>
+                            </div>
+                          </div>
+                          <!-- მეორე ღილაკი -->
+                          <div class="catalog-item">
+                            <!--ჰოვერი ჩავუხსენი თუ გინდა ჩაურთე ამ ღილაკზე კიდევ კატეგრობი რო გამოვიდეს-->
+                            
+                            <img src="img/icon/dasveneba.png" alt="errimg" class="catalog_icon"> 
+                             <button onclick="filterCategory('დასვენება')"class="categ_bt">დასვენება</button>
+                            <div class="hover-menu">
+                              <div><button onclick="filterCategory('სასტუმრო')"class="categ_bt">სასტუმრო</button></div>
+                              <div><button onclick="filterCategory('აპარტამენტი')"class="categ_bt">აპარტამენტი</button></div>
+                              <div><button onclick="filterCategory('კოტეჯი')"class="categ_bt">კოტეჯი</button></div>
+                              <div><button onclick="filterCategory('საოჯახო სასტუმრო')"class="categ_bt">საოჯახო სასტუმრო</button></div>
+                              <div><button onclick="filterCategory('მთაში')"class="categ_bt">მთაში</button></div>
+                              <div><button onclick="filterCategory('ზღვაზე')"class="categ_bt">ზღვაზე</button></div>
+                            </div>
+                          </div>
+                          <!-- მესამე ღილაკი -->
+                          <div class="catalog-item">
+                            <img src="img/icon/kveba.png" alt="errimg" class="catalog_icon"> 
+                            <button onclick="filterCategory('კვება')"class="categ_bt">კვება</button>
+                            <div class="hover-menu">
+                                <div><button onclick="filterCategory('რესტორანი')"class="categ_bt">რესტორანი</button></div>
+                                <div><button onclick="filterCategory('კლუბი')"class="categ_bt">კლუბი</button></div>
+                                <div><button onclick="filterCategory('კარაოკე')"class="categ_bt">კარაოკე</button></div>
+                                <div><button onclick="filterCategory('ბარი')"class="categ_bt">ბარი</button></div>
+                                <div><button onclick="filterCategory('პაბი')"class="categ_bt">პაბი</button></div>
+                                <div><button onclick="filterCategory('პიცერია')"class="categ_bt">პიცერია</button></div>
+                                <div><button onclick="filterCategory('ბურგერი')"class="categ_bt">ბურგერი</button></div>
+                            </div>
+                          </div>
+
+                          <div class="catalog-item">
+                                <img src="img/icon/gartoba.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('კვება')"class="categ_bt">გართობა</button>
+                                <div class="hover-menu">
+                                    <div><button onclick="filterCategory('საბილიარდო')"class="categ_bt">საბილიარდო</button></div>
+                                    <div><button onclick="filterCategory('ბოულინგი')"class="categ_bt">ბოულინგი</button></div>
+                                    <div><button onclick="filterCategory('სახლი წვეულების')"class="categ_bt">სახლი წვეულების</button></div>
+                                    <div><button onclick="filterCategory('Game')"class="categ_bt">Game</button></div>
+                                    <div><button onclick="filterCategory('კარაოკე')"class="categ_bt">კარაოკე</button></div>
+                                    <div><button onclick="filterCategory('ფოტოსესია')"class="categ_bt">ფოტოსესისა</button></div>
+                                    
+                                </div>
+
+                            
+
+                            
+                            </div>
+
+                            <div class="catalog-item">
+                                <img src="img/icon/estetika.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('ესთეტიკა')"class="categ_bt">ესთეტიკა</button>
+                                <div class="hover-menu">
+                                    <div><button onclick="filterCategory('მასაჟი')"class="categ_bt">მასაჟი</button></div>
+                                    <div><button onclick="filterCategory('ეპილაცია')"class="categ_bt">ეპილაცია</button></div>
+                                    <div><button onclick="filterCategory('სოლარიუმი')"class="categ_bt">სოლარიუმი</button></div>
+                                    <div><button onclick="filterCategory('ფრჩხილები')"class="categ_bt">ფრჩხილები</button></div>
+                                    <div><button onclick="filterCategory('თმა')"class="categ_bt">თმა</button></div>
+                                    <div><button onclick="filterCategory('მაკიაჟი')"class="categ_bt">მაკიაჟი</button></div>
+                                    <div><button onclick="filterCategory('წვერი')"class="categ_bt">წვერი</button></div>
+                                    <div><button onclick="filterCategory('ტატუ')"class="categ_bt">ტატუ</button></div>
+                                </div>
+                            </div>
+
+                            <div class="catalog-item">
+                                <img src="img/icon/jannmrteloba.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('ჯანმრთელობა')"class="categ_bt">ჯანმრთელობა</button>
+                                <div class="hover-menu">
+                                    <div><button onclick="filterCategory('აუზი')"class="categ_bt">აუზი</button></div>
+                                    <div><button onclick="filterCategory('ფიტნესი')"class="categ_bt">ფიტნესი</button></div>
+                                    <div><button onclick="filterCategory('ზუმბა')"class="categ_bt">ზუმბა</button></div>
+                                    <div><button onclick="filterCategory('ფრჩხილები')"class="categ_bt">ფრჩხილები</button></div>
+                                    <div><button onclick="filterCategory('სტომატოლოგია')"class="categ_bt">სტომატოლოგია</button></div>
+                                  
+                                    
+                                </div>
+                            </div>
+
+                            <div class="catalog-item">
+                                <img src="img/icon/sabavsho.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('საბავშვო')"class="categ_bt">საბავშვო</button>
+                                <div class="hover-menu">
+                                    <div><button onclick="filterCategory('ფოტოსტუდია')"class="categ_bt">ფოტოსტუდია</button></div>
+                                    <div><button onclick="filterCategory('გასართობი ცენტრი')"class="categ_bt">გასართობი ცენტრი</button></div>
+                                    
+                                   
+                                </div>
+                            </div>
+
+                            <div class="catalog-item">
+                                <img src="img/icon/ganatleba.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('განათლება')"class="categ_bt">განათლება</button>
+                                <div class="hover-menu">
+                                    <div><button onclick="filterCategory('ენის კურსები')"class="categ_bt">ენის კურსები</button></div>
+                                    <div><button onclick="filterCategory('ავტოსკოლა')"class="categ_bt">ავტოსკოლა</button></div>
+                                    <div><button onclick="filterCategory('ბუღალტრია')"class="categ_bt">ბუღალტერია</button></div>
+                                    <div><button onclick="filterCategory('პროგრამირება')"class="categ_bt">პროგრამირება</button></div>
+                                    
+                                   
+                                </div>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="img/icon/sxvadasxva.png" alt="errimg" class="catalog_icon"> 
+                                <button onclick="filterCategory('სხვა')"class="categ_bt">სხვა</button>
+                                <div class="hover-menu">
+                                    <!-- <div><button onclick="filterCategory('ენის კურსები')"class="categ_bt">ენის კურსები</button></div> -->
+                                    <div><button onclick="filterCategory('პროგრამირება')"class="categ_bt">სხვა</button></div>
+                                    
+                                   
+                                </div>
+                            </div>
+                         
+
+                         </div>
+                    
+                     </div>
+                    
+                    <a href="Partner.html" class="nav-item nav-link">პარტნიორები</a>
+                    <a href="contact.html" class="nav-item nav-link">კონტაქტი</a>
+                </div>
+                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control border-0" placeholder="საძიებო სიტყვა">
+                    <div class="input-group-append">
+                        <button class="input-group-text bg-primary text-dark border-0 px-3"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <div>
+
+<!-- მონაცემების განლაგება -->
+<div id="items"></div>
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+<div class="row py-4">
+    <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">საკონტაქტო </h5>
+        
+        <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>568 800 554</p>
+    
+        <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+        <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">დაგვაფეოლოვეთ</h6>
+        <div class="d-flex justify-content-start">
+        
+            <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+            
+            <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-instagram"></i></a>
+    
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">სიახლეები</h5>
+        <div class="mb-3">
+            <div>
+                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+            </div>
+            
+            <a class="small text-body text-uppercase font-weight-medium" href=""> ჩვენ არ ვიღებთ მომხარებლისგან საკომისოს და არ ვყიდით ვაუჩერებს. ფასდაკლებისთვის გადახდა არ გიწევთ.</a>
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+            </div>
+            <a class="small text-body text-uppercase font-weight-medium" href=""> ნივთის მიწოდება თბილისში არის უფასო.</a>
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">სიახლე</a>
+                <a class="text-body" href=""><small>Jan 25, 2025</small></a>
+            </div>
+            <a class="small text-body text-uppercase font-weight-medium" href="contact.html">როგორ მივიღო ფასდაკლება ?</a>
+        </div>
+        
+    </div>
+    
+    
+</div>
+</div>
+<div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+<p class="m-0 text-center">&copy; <a href="https://www.iurimatch.com/">iurimatch</a>. All Rights Reserved. 
+
+
+Design by <a href="https://www.iurimatch.com/">iurimatch</a></p>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
