@@ -77,6 +77,7 @@ function globalSearch(query) {
                    item.description2.toLowerCase().includes(query.toLowerCase()) ||
                    item.description3.toLowerCase().includes(query.toLowerCase());
         });
+        displenonestyle() //გააქრობს დივებს
         catalogMenu.style.display = "none"  //კატლოგის ჩამოშლილ ღილაკს აკეცავს,იტემის მოძებნის შემთხვევაში
         displayItems(filteredItems); //ეს ფუნქცია, reklama.js ში არის იქედან გამოვაჩინე, 
         displayItems(filteredItems);  // გამოტანის ფუნქცია
