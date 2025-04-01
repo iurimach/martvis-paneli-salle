@@ -45,11 +45,11 @@ if (selectedItem) {
             <h2 class="selectitem_name" id="select_item_name">${selectedItem.name}</h2>
             <div class="detaild_phone_div">
                 <div class="misamarti_wrapper">
-                     <img src="../img/icon/adgili.png" alt="misamarti_ligi" class="misamarti_logo">
+                     <img src="img/icon/adgili.png" alt="misamarti_ligi" class="misamarti_logo">
                     <p> ${selectedItem.address}</p>
                 </div>
                  <div class="telefon_wrapper">
-                     <img src="../img/icon/telefon.png" alt="misamarti_ligi" class="telefon_logo">
+                     <img src="img/icon/telefon.png" alt="misamarti_ligi" class="telefon_logo">
                     <p> ${selectedItem.phone}</p>
                 </div>
         
@@ -60,11 +60,18 @@ if (selectedItem) {
              <p class="description1" id="description1">${selectedItem.description1}</p>
               
              
-              
+            <a href="${selectedItem.ahref}" target="_blank" id="selectedItem_href_id">${selectedItem.name} ვებ გვერდზე გადასვლა</a>
           
         `;
-        // <a href="${selectedItem.ahref}" target="_blank">მეტი ინფორმაციისთვის</a>
-      
+        //აქ ვწერ მხოლოდ იფ პირობას, თუ  ტქენიკა არის მაშინ გავაქრობ ფასდკლების კოდის გენერირების დივს, და გამოაჩნ ა ჰრეფს
+        //რადგან ტექნიკა მე თითონ მიმაქ და ლინკზე გადადის და იქ იპოვის
+        if (selectedItem.category.includes("ტექნიკა") || selectedItem.category.includes("ტელეფონი")) {
+            
+            const selectedItem_href_id = document.getElementById("selectedItem_href_id");
+            selectedItem_href_id.style.display = "block";//გამქრალი ლინკი მაქ დეფაულტად, აქ ვაჩენ
+            const section1Wrapper3=document.getElementById("section1Wrapper3")
+            section1Wrapper3.style.display = "none"
+        }
         selectedItem.description1_details.forEach(item_desc => {
             
             const paragraf = document.createElement('li');

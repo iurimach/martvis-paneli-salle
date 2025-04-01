@@ -24,8 +24,13 @@ overflow: hidden; /* ეს შეიზღუდავს სურათის
 }
 
 .item_name{
-   margin-left: 10px;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  
    margin-top: 10px;
+   margin-left: 5px;
    
 }
 
