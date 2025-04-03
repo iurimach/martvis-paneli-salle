@@ -71,7 +71,27 @@ if (selectedItem) {
             selectedItem_href_id.style.display = "block";//გამქრალი ლინკი მაქ დეფაულტად, აქ ვაჩენ
             const section1Wrapper3=document.getElementById("section1Wrapper3")
             section1Wrapper3.style.display = "none"
+
+            
+
+            // ა ტეგს ვქმნი contac.html ზე რომ გადავიდეს, თუ ტექნიკის დეტლებშია შესული რადგან იქ მიწერია გამომიგზავნე ლინკითქო
+            const contactLink = document.createElement('a');
+            contactLink.href = 'contact.html';
+            contactLink.textContent = 'კონტაქტი';
+            contactLink.className = 'contact-button';
+            
+
+            // დაამატე event listener ხელის დაჭერისთვის
+            contactLink.addEventListener('click', function(e) {
+                e.preventDefault(); // თავიდან აიცილე სტანდარტული ქმედება
+                window.location.href = this.href; // გადადი contact.html-ზე
+            });
+
+        // დაამატე ელემენტი DOM-ში (მაგალითად, body-ში)
+         detailsDiv.appendChild(contactLink)
         }
+
+
         selectedItem.description1_details.forEach(item_desc => {
             
             const paragraf = document.createElement('li');
@@ -105,7 +125,7 @@ if (selectedItem) {
         //დამატებითი აგწერა
         selectedItem.damatebiTi_agwera.forEach(item_desc => {
             
-            const paragraf = document.createElement('li');
+            const paragraf = document.createElement('p'); //აქ თუ გინდა ლი ტეგი შექემნი li
             paragraf.textContent = item_desc;
             if(paragraf.textContent.length > 1){// ცარიელი არის აღარ დაამატებს ჰტმლში
                 detailsDiv.appendChild(paragraf);

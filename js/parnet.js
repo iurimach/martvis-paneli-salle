@@ -22,14 +22,14 @@ async function fetchData() {
         }
 
         const data = await response.json();  // JSON მონაცემების მიღება
-        console.log(data, " - მიღებული მონაცემები");
+       
 
         return data;  // დამთავრებული მონაცემები
     } catch (error) {
         console.error('შეცდომა:', error);
     }
 }
-console.log("js parnet open")
+
 // ფილტრის ფუნქცია (კატეგორიის მიხედვით)
 async function filterCategory() {
     try {

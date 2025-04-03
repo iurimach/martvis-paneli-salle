@@ -37,6 +37,9 @@
     margin-left: 15px;
     font-size: 20px;
 }
+.contact-button{
+    margin-left: 15px;
+}
 #detail_images_all_wrapper img:not(:first-child) {
        margin-left: 20px;
       
@@ -168,6 +171,8 @@ padding: 5px;
     margin-top: 15px;
 }
 .selectitem_name{
+    display: flex;
+    justify-content: center;
     width: 400px;
     max-width: 400px;
     margin:0  auto;
